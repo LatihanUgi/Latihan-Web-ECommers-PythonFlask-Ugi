@@ -1,0 +1,42 @@
+<ul class="nav" id="side-menu">
+							<li>
+								<a href="/index"><i class="fa fa-home nav_icon"></i>Dashboard</a>
+							</li>
+							{% if session['status'] == 'Admin' %}
+							<li>
+								<a href="#"><i class="glyphicon glyphicon-user nav_icon"></i>Administrator <span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level collapse">
+									<li>
+										<a href="/addadmin">Tambah Admin</a>
+									</li>
+									<li>
+										<a href="/lihatadmin">Lihat Admin</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="glyphicon glyphicon-list nav_icon"></i>Kategori Produk <span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level collapse">
+									<li>
+										<a href="/addkat">Tambah Kategori Produk</a>
+									</li>
+									<li>
+										<a href="/lihatkat">Lihat Kategori Produk</a>
+									</li>
+								</ul>
+							</li>
+							{% else %}
+							<li>
+								<a href="#"><i class="glyphicon glyphicon-list nav_icon"></i>Kategori Produk <span class="fa arrow"></span></a>
+								<ul class="nav nav-second-level collapse">
+									<li>
+										<a href="/addkat">Tambah Kategori Produk</a>
+									</li>
+									<li>
+										<a href="/lihatkat">Lihat Kategori Produk</a>
+									</li>
+								</ul>
+							</li>
+							{% endif %}
+								<!-- /nav-second-level -->
+						</ul>
